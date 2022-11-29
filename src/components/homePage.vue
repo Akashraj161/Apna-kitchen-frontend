@@ -76,11 +76,17 @@
     <div class="container" v-for="post in postDetails" :key="post.email" >
       <div class="row" >
           <div class="col-md-10 cards offset-md-2" >
-            <img
+            <!-- <img
               v-bind:src="require(`../../../ApnaKitchen_backend/uploads/${post.file}`)"
               alt="Image"
               class="img-fluid"
+            /> -->
+            <img
+              v-bind:src="'https://apnakitchen-api.onrender.com/'+image"
+              alt="Image"
+              class="img-fluid"
             />
+            
             <div class="restaurant-name ">
               <h4>{{post.restaurantName}}</h4>
             </div>
@@ -150,7 +156,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:4000/api/newRestaurant")
+      .get("https://apnakitchen-api.onrender.com/api/newRestaurant")
       .then((response) => {
         console.log(response.data);
         this.formatPosts(response.data);
