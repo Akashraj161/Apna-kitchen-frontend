@@ -6,7 +6,7 @@
       </div>
       <div class="col-4">
         <img
-              v-bind:src="require(`../../../ApnaKitchen_backend/src/uploads/${post.file}`)"
+              v-bind:src="'https://apnakitchen-api.onrender.com/'+image"
               alt="Image"
               class="img-fluid"
             />
@@ -26,7 +26,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:4000/api/newRestaurant")
+      .get("https://apnakitchen-api.onrender.com/api/newRestaurant")
       .then((response) => {
         console.log(response.data);
         this.formatPosts(response.data);

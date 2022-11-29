@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     async logIn() {
-      let result = await axios.post("http://localhost:4000/api/adminlogin", {
+      let result = await axios.post("https://apnakitchen-api.onrender.com/api/adminlogin", {
         email: this.email,
         password: this.password,
       });

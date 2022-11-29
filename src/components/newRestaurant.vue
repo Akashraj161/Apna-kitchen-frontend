@@ -3,7 +3,7 @@
     <div class="col-sm-9">
       <div class="signupForm">
         <!-- <form @submit.prevent="addNewRestaurant"> -->
-          <form action="http://localhost:4000/api/newRestaurant" method="post" enctype="multipart/form-data">
+          <form action="https://apnakitchen-api.onrender.com/api/newRestaurant" method="post" enctype="multipart/form-data">
           <h1 class="loginTitle">Add New Restaurant</h1>
           <div class="input-group mb-4">
             <span class="input-group-text" id="basic-addon1">Name</span>
