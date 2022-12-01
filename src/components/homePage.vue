@@ -77,7 +77,7 @@
       <div class="row" >
           <div class="col-md-10 cards offset-md-2" >
             <!-- <img
-              v-bind:src="require(`../../../ApnaKitchen_backend/uploads/${post.file}`)"
+              v-bind:src="require(`../../../ApnaKitchen_backend/src/uploads/${post.file}`)"
               alt="Image"
               class="img-fluid"
             /> -->
