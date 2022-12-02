@@ -73,16 +73,16 @@
         </div>
     
     
-    <div class="container" v-for="post in postDetails" :key="post.email" >
+    <div class="container" >
       <div class="row" >
-          <div class="col-md-10 cards offset-md-2" >
+          <div class="col-md-10 cards offset-md-2" v-for="post in postDetails" :key="post.email"  >
             <!-- <img
               v-bind:src="require(`../../../ApnaKitchen_backend/src/uploads/${post.file}`)"
               alt="Image"
               class="img-fluid"
             /> -->
             <img
-              v-bind:src="'https://apnakitchen-api.onrender.com/'+image"
+              v-bind:src="'https://apnakitchen-api.onrender.com/'+uploads"
               alt="Image"
               class="img-fluid"
             />
@@ -146,7 +146,7 @@ export default {
   },
   methods: {
     goTodetail(prodId) {
-      this.$router.push({ name: "restaurantDetails", params: { Pid: prodId } });
+      this.$router.push({ name: "detailsPage", params: { Pid: prodId } });
     },
     formatPosts(postData) {
       for (let key in postData) {
@@ -200,6 +200,7 @@ export default {
 .container{
   display: flex;
  flex-direction: column;
+ 
 
 }
 .row{
